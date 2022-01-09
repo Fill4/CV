@@ -40,26 +40,33 @@
 % CV Info (to be customized).
 \newcommand{\CVAuthor}{Filipe Pereira}
 \newcommand{\CVTitle}{Curriculum Vit\ae}
-\newcommand{\CVNote}{CV compiled on {\today} for Acme Corporation}
-\newcommand{\CVWebpage}{http://www.example.com/johndoe}
+\newcommand{\CVNote}{CV}
+\newcommand{\CVWebpage}{}
 
 % PDF settings and properties.
 \hypersetup{
-pdftitle={\CVTitle},
-pdfauthor={\CVAuthor},
-pdfsubject={\CVWebpage},
-pdfcreator={XeLaTeX},
-pdfproducer={},
-pdfkeywords={},
-pdfpagemode={},
-bookmarks=true,
-unicode=true,
-bookmarksopen=true,
-pdfstartview=FitH,
-pdfpagelayout=OneColumn,
-pdfpagemode=UseOutlines,
-hidelinks,
-breaklinks}
+	pdftitle={\CVTitle},
+	pdfauthor={\CVAuthor},
+	pdfsubject={\CVWebpage},
+	pdfcreator={XeLaTeX},
+	pdfproducer={},
+	pdfkeywords={},
+	pdfpagemode={},
+	bookmarks=true,
+	unicode=true,
+	bookmarksopen=true,
+	pdfstartview=FitH,
+	pdfpagelayout=OneColumn,
+	pdfpagemode=UseOutlines,
+	hidelinks,
+	breaklinks,
+	% Color settings
+	colorlinks = true,
+    linkcolor = blue,
+    urlcolor  = blue,
+    citecolor = blue,
+    anchorcolor = blue
+}
 
 % Shorthand.
 \newcommand{\CodeCommand}[1]{\mbox{\textbf{\textbackslash{#1}}}}
@@ -75,13 +82,16 @@ breaklinks}
 %%%%%%%%%%%%%%%
 
 \title{\CVAuthor}
-\subtitle{\CVTitle}
+%\subtitle{\CVTitle}
 
 \begin{subtitle}
 %{Rua Dr. Orlando de Oliveira, nº11, 2ºDto, 3800-004, Aveiro, Portugal}
+
 \par
-\href{mailto:filipe.pereira@astro.up.pt}
-{filipe.pereira@astro.up.pt}
+\GapNoBreak
+\href{mailto:filipe.pereira@astro.up.pt}{filipe.pereira@astro.up.pt} \\
+Github: \href{https://github.com/Fill4}{github.com/Fill4} \\ 
+Orcid: \href{https://orcid.org/0000-0002-2157-7146}{0000-0002-2157-7146}
 %\,\SubBulletSymbol\,
 %+351 913 231 818
 %\,\SubBulletSymbol\,
@@ -100,26 +110,28 @@ breaklinks}
 {Education}
 {PDF:Education}
 
-{\textbf{Faculty of Sciences of the University of Porto}},
-Porto, Portugal
-
-\GapNoBreak
-\BulletItem
-Doctoral Programme in Astronomy
+\textbf{PhD in Astronomy}, Faculty of Sciences, University of Porto
 \hfill
-\DatestampYMD{2016}{10}{01} --
-Ongoing
+% \DatestampYM{2016}{10} -- 
+\DatestampYM{2021}{12}
 \begin{detail}
-\SubBulletItem
-Completed courses: Exoplanets; Asteroseismology; Jets; Data Analysis
+\BulletItem
+Advisors: Tiago Compante, Margarida Cunha, Nuno Santos
+\BulletItem
+Thesis: \href{https://hdl.handle.net/10216/138552}{Detection and characterization of planets orbiting oscillating red-giant stars with NASA's TESS mission}
 \end{detail}
 
 \GapNoBreak
-\BulletItem
-M.Sc. in Astronomy
+\textbf{MSc in Astronomy}, Faculty of Sciences, University of Porto
 \hfill
-\DatestampYMD{2014}{10}{15} --
-\DatestampYMD{2016}{10}{15}
+% \DatestampYM{2014}{10} -- 
+\DatestampYM{2016}{09}
+\begin{detail}
+\BulletItem
+Advisor: Mário João Monteiro
+\BulletItem
+Thesis: \href{https://repositorio-aberto.up.pt/handle/10216/90991}{Development of automatic tools for measuring acoustic glitches in seismic data of solar-type stars}
+\end{detail}
 
 %\begin{detail}
 %\SubBulletItem
@@ -132,91 +144,305 @@ M.Sc. in Astronomy
 %\end{detail}
 
 \GapNoBreak
-\BulletItem
-Bachelor's Degree in Astronomy
+\textbf{BSc in Astronomy}, Faculty of Sciences, University of Porto
 \hfill
-\DatestampYMD{2011}{09}{15} --
-\DatestampYMD{2014}{09}{15}
+% \DatestampYM{2011}{09} -- 
+\DatestampYM{2014}{09}
+
+
+%%%%%%%%%%%%%%%%%%
+%% PUBLICATIONS %%
+%%%%%%%%%%%%%%%%%%
+
+\section
+{Refereed Publications}
+{Refereed Publications}
+{PDF:Publications}
+
+See list in \href{https://ui.adsabs.harvard.edu/public-libraries/gKWEYjBTR7KtFkRn00r-pw}{ADS} 
+
+\GapNoBreak
+\subsection
+{Journals}
+{Journals}
+{PDF:Journals}
+
+% \NumberedItem{1.}
+\BulletItem
+Grunblatt S., Saunders, N., et al. including \textbf{Pereira, F.} \newline
+\textit{TESS Giants Transiting Giants II: The hottest Jupiters orbiting evolved stars}. \newline
+2022, Accepted for publication in AAS
+%2022, AAS, --, --, 
+%DOI: \href{}{--}, 
+%arXiv: \href{}{--}.
+
+% \NumberedItem{2.}
+\BulletItem
+Lund, M. N., Handberg, R., et al. including \textbf{Pereira, F.} \newline
+\textit{TESS Data for Asteroseismology: Light-curve Systematics Correction}. \newline
+2021, ApJS, 257, 53,
+DOI: \href{https://doi.org/10.3847/1538-4365/ac214a}{10.3847/1538-4365/ac214a}, 
+arXiv: \href{https://arxiv.org/abs/2108.11780}{2108.11780}.
+
+% \NumberedItem{3.}
+\BulletItem
+Lillo-box, J. Ribas, Á., et al. including \textbf{Pereira, F.} \newline
+\textit{Uncovering the ultimate planet impostor. An eclipsing brown dwarf in a hierarchical triple with two evolved stars}. \newline
+2021, A\&A, 653, A40,
+DOI: \href{https://doi.org/10.1051/0004-6361/202141158}{10.1051/0004-6361/202141158}, 
+arXiv: \href{https://arxiv.org/abs/2106.05011}{2106.05011}.
+
+% \NumberedItem{4.}
+\BulletItem
+Silva Aguirre, V., Stello, D., et al. including \textbf{Pereira, F.} \newline
+\textit{Detection and Characterization of Oscillating Red Giants: First Results from the TESS Satellite}. \newline
+2020, ApJL, 889, L34,
+DOI: \href{https://doi.org/10.3847/2041-8213/ab6443}{10.3847/2041-8213/ab6443}, 
+arXiv: \href{https://arxiv.org/abs/1912.07604}{1912.07604}.
+
+% \NumberedItem{5.}
+\BulletItem
+Barros S.C.C., Demangeon, O., et al. including \textbf{Pereira, F.} \newline
+\textit{Improving transit characterisation with Gaussian process modelling of stellar variability}. \newline
+2020, A\&A, 634, A75,
+DOI: \href{https://doi.org/10.1051/0004-6361/201936086}{10.1051/0004-6361/201936086}, 
+arXiv: \href{https://arxiv.org/abs/2001.07975}{2001.07975}.
+
+% \NumberedItem{6.}
+\BulletItem
+\textbf{Pereira, F.}, Campante, T. L., Cunha, M. S. et al. \newline
+\textit{Gaussian process modelling of granulation and oscillations in red giant stars}. \newline
+2019, MNRAS, 489, 5764,
+DOI: \href{https://doi.org/10.1093/mnras/stz2405}{10.1093/mnras/stz2405}, 
+arXiv: \href{https://arxiv.org/abs/1908.10662}{1908.10662}.
+
+% \NumberedItem{7.}
+\BulletItem
+Campante, T. L., Corsaro, E., et al. including \textbf{Pereira, F.} \newline
+\textit{TESS Asteroseismology of the Known Red-giant Host Stars HD 212771 and HD 203949}. \newline
+2019, ApJ, 885, 31,
+DOI: \href{https://doi.org/10.3847/1538-4357/ab44a8}{10.3847/1538-4357/ab44a8}, 
+arXiv: \href{https://arxiv.org/abs/1909.05961}{1909.05961}.
+
+% \NumberedItem{8.}
+\BulletItem
+Huber, D., Chaplin, W. J., et al. including \textbf{Pereira, F.} \newline
+\textit{A Hot Saturn Orbiting an Oscillating Late Subgiant Discovered by TESS}. \newline
+2019, AJ, 157, 245,
+DOI: \href{https://doi.org/10.3847/1538-3881/ab1488}{10.3847/1538-3881/ab1488}, 
+arXiv: \href{https://arxiv.org/abs/1901.01643}{1901.01643}.
+
+\BigGap
+\subsection
+{Proceedings}
+{Proceedings}
+{PDF:Proceedings}
+
+% \NumberedItem{1.}
+\BulletItem
+\textbf{Pereira, F.}, Faria, J. P. S. and Monteiro, M. J. P. F. G. \newline
+\textit{SIGS - Seismic Inferences for Glitches in Stars}. \newline
+2017, EPJWC, 160, 01015,
+DOI: \href{https://doi.org/10.1051/epjconf/201716001015}{10.1051/epjconf/201716001015}, 
+arXiv: \href{https://arxiv.org/abs/1703.04828}{1703.04828}.
+
+%%%%%%%%%%%%%%%%%%%%%
+%% TALKS / POSTERS %%
+%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Talks/Posters}
+{Talks/Posters}
+{PDF:TalksPosters}
+
+\subsection
+{Talks}
+{Talks}
+{PDF:Talks}
+
+% \NumberedItem{1.}
+\BulletItem
+\emph{Using Gaussian Processes to model stellar granulation and oscillations in red-giant stars}. \newline
+\href{http://conferences.au.dk/tasc4/}{TASC4/KASC11 Workshop}. July 2018, Aarhus, Denmark
+
+\GapNoBreak
+
+% \NumberedItem{2.}
+\BulletItem
+\emph{Using Gaussian Processes to model stellar granulation and oscillations in red-giant stars}. \newline
+\href{https://sites.google.com/view/ras-evolsystems/home}{RAS Specialist Discussion Meeting}. March 2018, London, UK
+
+
+\BigGap
+\subsection
+{Posters}
+{Posters}
+{PDF:Posters}
+
+% \NumberedItem{1.}
+\BulletItem
+\emph{Gaussian process modelling of TESS light curves in the presence of stellar variability and transits}. \newline
+\href{https://web.mit.edu/tasc5/}{TASC5/KASC12 Workshop}. July 2019, Boston, USA
+
+\GapNoBreak
+
+% \NumberedItem{2.}
+\BulletItem
+\emph{Tessting gaussian process regression for red-giant granulation modelling}. \newline
+\href{https://www.tasc3kasc10.com/}{TASC3/KASC10 Workshop}. July 2017, Birmingham, UK
+
+\GapNoBreak
+
+% \NumberedItem{3.}
+\BulletItem
+\emph{SIGS - Seismic Inferences for Glitches in Stars}. \newline
+\href{http://www.iastro.pt/research/conferences/spacetk16/}{TASC2/KASC9 Workshop}. July 2016, Azores, Portugal
+
+    
+% \BigGap
+% \subsection
+% {Reports}
+% {Reports}
+% {PDF:Reports}
+
+% \NumberedItem{1.}
+% Msc Grant Final Report
+% \NumberedItem{2.}
+% PEEC Project Report
+% \NumberedItem{3.}
+% Research Seminar in Astronomy Project Report
+
+
+%%%%%%%%%%%%%%%%%%%%%
+%% ACADEMIC AWARDS %%
+%%%%%%%%%%%%%%%%%%%%%
+
+\section
+{Grants}
+{Grants}
+{PDF:Grants}
+
+\BulletItem
+PhD Grant - FCT ($\sim$60,000 EUR) \hfill 
+\DatestampY{2017} -- \DatestampY{2021}
+
+\GapNoBreak
+\BulletItem
+Research Grant - FCT ($\sim$12,000 EUR) \hfill 
+\DatestampY{2017} -- \DatestampY{2017}
+
+\GapNoBreak
+\BulletItem
+MSc Grant - SPACEINN ($\sim$7,000 EUR) \hfill 
+\DatestampY{2015} -- \DatestampY{2016}
+
+% Development of automatic tools for measuring acoustic glitches in seismic 
+% \hfill
+% \DatestampY{2015}{1 \par
+%  data of solar-type stars
+% \BulletItem
+% Project: SPACEINN (FP7-SPACE-2012-312844)
+% \BulletItem
+% Advisor: Dr. Mário João Monteiro
+% \BulletItem
+% Institution: Centro de Astrofísica da Universidade do Porto (CAUP)
+% \BulletItem
+% Grant: \textasciitilde 7000 EUR
+
+% \BigGap
+% ​Characterizing and modelling red giants
+% \hfill
+% \DatestampYMD{2017}{01}{01} --
+% \DatestampYMD{2017}{12}{31}
+% \BulletItem
+% Project: ​CIAAUP-09/2016-BI
+% \BulletItem
+% Advisor: Dr. Margarida Cunha
+% \BulletItem
+% Institution: Centro de Astrofísica da Universidade do Porto (CAUP)
+% \BulletItem
+% Grant: \textasciitilde 12000 EUR
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% OTHER CURRICULAR ACTIVITIES %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section
-{Other Curricular Activities}
-{Other Curricular Activities}
-{PDF:OtherCurricularActivities}
+% \section
+% {Other Curricular Activities}
+% {Other Curricular Activities}
+% {PDF:OtherCurricularActivities}
 
-\href{http://www.iastro.pt/research/conferences/faial2016/}
-{\textbf{IVth Azores International Advanced School in Space Sciences}},
-Azores, Portugal
-\hfill
-\DatestampYMD{2016}{07}{17}
-\GapNoBreak
-\BulletItem
-Completed various courses totaling 49 hours.
-\BulletItem
-Included courses in: Stellar Modelling, Theory of Stellar Oscillations, Data Analysis in Asteroseismology, Exoplanetary Science, Analysis of Photometric Time Series
+% \href{http://www.iastro.pt/research/conferences/faial2016/}
+% {\textbf{IVth Azores International Advanced School in Space Sciences}},
+% Azores, Portugal
+% \hfill
+% \DatestampYM{2016}{07}
+%\GapNoBreak
+%\BulletItem
+%Completed various courses totaling 49 hours.
+%\BulletItem
+%Included courses in: Stellar Modelling, Theory of Stellar Oscillations, Data Analysis in Asteroseismology, Exoplanetary Science, Analysis of Photometric Time Series
 
-\BigGap
-{\textbf{Machine Learning Course from Stanford University}}
-\hfill
-\DatestampYMD{2015}{09}{15} --
-\DatestampYMD{2015}{12}{07}
+% \GapNoBreak
+% {\textbf{Machine Learning Course from Stanford University}}
+% \hfill
+% \DatestampYMD{2015}{09}{15} --
+% \DatestampYMD{2015}{12}{07}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% ACADEMIC RESEARCH WORK %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section
-{Academic Research Work}
-{Academic Research Work}
-{PDF:AcademicResearchWork}
+% \section
+% {Academic Research Work}
+% {Academic Research Work}
+% {PDF:AcademicResearchWork}
 
-{\textbf{Research Seminar in Astronomy}}
-\hfill
-\DatestampYMD{2017}{07}{15} --
-\DatestampYMD{2016}{10}{01}
-\begin{detail}
-\SubBulletItem
-Project: Testing gaussian process regression for red-giant granulation modelling
-\SubBulletItem
-Supervisor:
-Dr. Margarida Cunha
-\SubBulletItem
-Research areas: red-giant stars, granulation, gaussian processes, python
-\end{detail}
+% {\textbf{Research Seminar in Astronomy}}
+% \hfill
+% \DatestampYMD{2017}{07}{15} --
+% \DatestampYMD{2016}{10}{01}
+% \begin{detail}
+% \SubBulletItem
+% Project: Testing gaussian process regression for red-giant granulation modelling
+% \SubBulletItem
+% Supervisor:
+% Dr. Margarida Cunha
+% \SubBulletItem
+% Research areas: red-giant stars, granulation, gaussian processes, python
+% \end{detail}
 
-{\textbf{Msc Dissertation}}
-\hfill
-\DatestampYMD{2016}{10}{15} --
-\DatestampYMD{2015}{10}{01}
-\begin{detail}
-\SubBulletItem
-Thesis: Development of automatic tools for measuring acoustic glitches in seismic data of solar-type stars
-\SubBulletItem
-Supervisor:
-Dr. Mário João Monteiro
-\SubBulletItem
-Research areas: Asteroseismology, acoustic glicthes, Fortran
-\end{detail}
+% {\textbf{Msc Dissertation}}
+% \hfill
+% \DatestampYMD{2016}{10}{15} --
+% \DatestampYMD{2015}{10}{01}
+% \begin{detail}
+% \SubBulletItem
+% Thesis: Development of automatic tools for measuring acoustic glitches in seismic data of solar-type stars
+% \SubBulletItem
+% Supervisor:
+% Dr. Mário João Monteiro
+% \SubBulletItem
+% Research areas: Asteroseismology, acoustic glicthes, Fortran
+% \end{detail}
 
-\GapNoBreak
-{\textbf{Undergradute Research Project}}
-\hfill
-\DatestampYMD{2014}{02}{15} --
-\DatestampYMD{2014}{07}{15}
-\begin{detail}
-\SubBulletItem
-Project:
-Study of the mizimization function in the ARES+MOOG procedure
-\SubBulletItem
-Supervisor:
-Dr. Sérgio Sousa
-\SubBulletItem
-Research areas: Spectroscopic Parameters, iron line abundances, Python
-\end{detail}
+% \GapNoBreak
+% {\textbf{Undergradute Research Project}}
+% \hfill
+% \DatestampYMD{2014}{02}{15} --
+% \DatestampYMD{2014}{07}{15}
+% \begin{detail}
+% \SubBulletItem
+% Project:
+% Study of the mizimization function in the ARES+MOOG procedure
+% \SubBulletItem
+% Supervisor:
+% Dr. Sérgio Sousa
+% \SubBulletItem
+% Research areas: Spectroscopic Parameters, iron line abundances, Python
+% \end{detail}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -228,293 +454,269 @@ Research areas: Spectroscopic Parameters, iron line abundances, Python
 %{Research Experience}
 %{PDF:ResearchExperience}
 
+
+%%%%%%%%%%%%%%
+%% TEACHING %%
+%%%%%%%%%%%%%%
+
+\section
+{Teaching}
+{Teaching}
+{PDF:Teaching}
+
+\BulletItem
+Escola de Verão de Física 2019 (Physics Summer School). Faculty of Sciences, University of Porto
+% \hfill \DatestampYM{2019}{09}
+\GapNoBreak
+\SubBulletItem
+Supervised and lectured a project about "The energy of stars" for a class of 5 high-school students
+
+\GapNoBreak
+\BulletItem
+Escola de Verão de Física 2018 (Physics Summer School). Faculty of Sciences, University of Porto
+% \hfill \DatestampYM{2018}{09}
+\GapNoBreak
+\SubBulletItem
+Supervised and lectured a project about "The energy of stars" for a class of 5 high-school students
+
+\GapNoBreak
+\BulletItem
+Escola de Verão de Física 2017 (Physics Summer School). Faculty of Sciences, University of Porto
+% \hfill \DatestampYM{2017}{09}
+\GapNoBreak
+\SubBulletItem
+Supervised and lectured a project about "The energy of stars" for a class of 5 high-school students
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SCIENTIFIC ACTIVITIES                  %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section
-{Research Activities}
-{Research Activities}
-{PDF:ResearchActivities}
+{Scientific Participation}
+{Scientific Participation}
+{PDF:ScietificParticipation}
 
-{\textbf{Research Internship}}
-\hfill
-\DatestampYMD{2016}{10}{15} -- Ongoing
-\begin{detail}
-\SubBulletItem
-Project:
-​Characterizing and modelling red giants
-\SubBulletItem
-Supervisor:
-Dr. Margarida Cunha
-\SubBulletItem
-Research areas: gaussian processes, grid-based modelling, red-giant stars
-\end{detail}
-
-\BigGap
-{\textbf{PEEC (Extra-Curricular Research Project)}}
-\hfill
-\DatestampYMD{2013}{10}{15} --
-\DatestampYMD{2015}{07}{15}
-\begin{detail}
-\SubBulletItem
-Project:
-Testing the applicability of using titanium line abundances to determine spectroscopic stellar parameters, especially surface gravity, using the ARES and MOOG tools
-\SubBulletItem
-Supervisor:
-Dr. Sérgio Sousa
-\SubBulletItem
-Research areas: Spectroscopic Parameters, titanium line abundances, Python
-\end{detail}
-
-\BigGap
-\href{http://www.tasc3kasc10.com/}
-{\textbf{Tessting Stellar Astrophysics, Joint TASC3 \& KASC10 Workshop}},
-Birmingham, UK
-\hfill
-\DatestampYMD{2017}{07}{17}
-
-\BigGap
-\href{http://www.iastro.pt/research/conferences/spacetk16/}
-{\textbf{Seismology of the Sun and the Distant Stars 2016, Joint TASC2 \& KASC9 Workshop – SPACEINN \& HELAS8 Conference}},
-Azores, Portugal
-\hfill
-\DatestampYMD{2016}{07}{11}
-
-\BigGap
-\href{http://sac.au.dk/currently/tess-data-for-asteroseismology-workshop/}
-{\textbf{1st TESS Data for Asteroseismology workshop - T'DA 1}},
-Birmingham, England
-\hfill
-\DatestampYMD{2016}{10}{30}
-
-\BigGap
-\href{http://sac.au.dk/currently/2nd-tess-data-for-asteroseismology-workshop/}
-{\textbf{2nd TESS Data for Asteroseismology workshop - T'DA 2}},
-Aarhus, Denmark
-\hfill
-\DatestampYMD{2017}{04}{18}
-
-\BigGap
-\textbf{Member of the IA Stars \& Planets Research Team}
-\GapNoBreak
-\BulletItem
-Participate in bi-weekly meetings with the Asteroseismology Team
-\GapNoBreak
-\BulletItem
-Participate in monthly meetings with the Exoplanets Team
-
-\BigGap
-\textbf{Member of CAUP (Center for Astrophysics of the University of Porto)}
-\GapNoBreak
-\BulletItem
-Attend regular seminar in various Astronomy topics presented by both local and visiting researchers
-
-%%%%%%%%%%%%%%%%%%
-%% PUBLICATIONS %%
-%%%%%%%%%%%%%%%%%%
-
-\section
-{Scientific Results}
-{Scientific Results}
-{PDF:ScientificResults}
-
-% \subsection
-% {Journals}
-% {Journals}
-% {PDF:Journals}
-
-% \GapNoBreak
-% \NumberedItem{[11]}
-% \href{http://www.example.com/my-paper-doi-5}
-% {\underline{J.~Doe}, J.~Citizen, and A.~Yone,
-% ``On lasers and climate change,''
-% \textit{Journal of Science},
-% vol.~89,
-% no.~2,
-% pp.~4123--4133,
-% \DatestampYM{2008}{02}.}
-
-% % Note the use of {\CharSpace} for aligning shorter numbers.
-% \Gap
-% \NumberedItem{{\CharSpace}[1]}
-% \href{http://www.example.com/my-paper-doi-4}
-% {\underline{J.~Doe} and J.~Citizen,
-% ``Measuring the extent of climate change,''
-% \textit{Global Scientific Journal},
-% vol.~12,
-% no.~4,
-% pp.~330--352,
-% \DatestampYM{2006}{12}.}
+% {\textbf{Research Internship}}
+% \hfill
+% \DatestampYMD{2016}{10}{15} -- \DatestampYMD{2017}{09}{30}
+% \begin{detail}
+% \SubBulletItem
+% Project:
+% ​Characterizing and modelling red giants
+% \SubBulletItem
+% Supervisor:
+% Dr. Margarida Cunha
+% \SubBulletItem
+% Research areas: gaussian processes, grid-based modelling, red-giant stars
+% \end{detail}
 
 % \BigGap
+% {\textbf{PEEC (Extra-Curricular Research Project)}}
+% \hfill
+% \DatestampYMD{2013}{10}{15} --
+% \DatestampYMD{2015}{07}{15}
+% \begin{detail}
+% \SubBulletItem
+% Project:
+% Testing the applicability of using titanium line abundances to determine spectroscopic stellar parameters, especially surface gravity, using the ARES and MOOG tools
+% \SubBulletItem
+% Supervisor:
+% Dr. Sérgio Sousa
+% \SubBulletItem
+% Research areas: Spectroscopic Parameters, titanium line abundances, Python
+% \end{detail}
+
 \subsection
-{Proceedings}
-{Proceedings}
-{PDF:Proceedings}
+{Conferences}
+{Conferences}
+{PDF:Conferences}
 
 \GapNoBreak
-\NumberedItem{1.}
-\href{}
-{\underline{Pereira L.F.R.}, Faria J.P.S., and Monteiro M.J.P.F.G., 
-\DatestampY{2016}, 
-SIGS - Seismic Inferences for Glitches in Stars,
-in Proceedings for the \textit{Seismology of the Sun and the Distant Stars 2016} Conference, \href{http://arxiv.org/abs/1703.04828} {arXiv}, submitted.}
+\BulletItem
+\href{http://www.iastro.pt/research/conferences/8th-imas/}{8th Iberian Meeting on Asteroseismology}. \DatestampY{2021}, Online
 
-\BigGap
-\subsection
-{Posters}
-{Posters}
-{PDF:Posters}
-
-\NumberedItem{1.}
-{\underline{Pereira L.F.}, Campante T.L., Cunha M.S., Santos N.C. and Barros S.C.C., 
-\DatestampY{2017}, 
-Testing gaussian process regression for red-giant granulation modelling,
-in \textit{Tessting Stellar Astrophysics} Joint TASC3 \& KASC10 Workshop.}
 \GapNoBreak
-\NumberedItem{2.}
-{\underline{Pereira L.F.R.}, Faria J.P.S., and Monteiro M.J.P.F.G., 
-\DatestampY{2016}, 
-SIGS - Seismic Inferences for Glitches in Stars,
-in \textit{Seismology of the Sun and the Distant Stars 2016} Conference.}
+\BulletItem
+\href{https://7thimas.cab.inta-csic.es/main/index.php}{7th Iberian Meeting on Asteroseismology}. \DatestampY{2020}, Online
+
+\GapNoBreak
+\BulletItem
+\href{https://web.mit.edu/tasc5/}{TASC5/KASC12 Workshop}. \DatestampY{2019}, Boston, USA
+% \hfill \DatestampYM{2019}{07}
+
+\GapNoBreak
+\BulletItem
+\href{http://conferences.au.dk/tasc4/}{TASC4/KASC11 Workshop}. \DatestampY{2018}, Aarhus, Denmark
+% \hfill \DatestampYM{2018}{07}
+
+\GapNoBreak
+\BulletItem
+\href{https://sites.google.com/view/ras-evolsystems/home}{RAS Specialist Discussion Meeting}. \DatestampY{2017}, London, UK
+
+\GapNoBreak
+\BulletItem
+\href{https://www.tasc3kasc10.com/}{TASC3/KASC10 Workshop}. \DatestampY{2017}, Birmingham, UK
+% \hfill \DatestampYM{2017}{07}
+
+\GapNoBreak
+\BulletItem
+\href{http://www.iastro.pt/research/conferences/spacetk16/}{TASC2/KASC9 Workshop}. \DatestampY{2016}, Azores, Portugal
+% \hfill \DatestampYM{2016}{07}
 
 \BigGap
 \subsection
-{Reports}
-{Reports}
-{PDF:Reports}
+{Workshops}
+{Workshops}
+{PDF:Workshops}
 
-\NumberedItem{1.}
-Msc Grant Final Report
-\NumberedItem{2.}
-PEEC Project Report
-\NumberedItem{3.}
-Research Seminar in Astronomy Project Report
+\GapNoBreak
+\BulletItem
+T'DA8: 8th TESS Data for Asteroseismology workshop. \DatestampY{2019}, Aarhus, Denmark
+% \hfill \DatestampYM{2019}{01}
 
-% \Gap
-% \NumberedItem{[10]}
-% \href{http://www.example.com/my-paper-doi-2}
-% {A.~Yone and \underline{J.~Doe},
-% ``Climate change and general relativity,''
-% in \textit{Proceedings of the International Astronomical Conference},
-% Sydney, Australia,
-% \DatestampYM{2006}{8}.}
+\GapNoBreak
+\BulletItem
+T'DA6: 6th TESS Data for Asteroseismology workshop. \DatestampY{2018}, Leuven, Belgium
+% \hfill \DatestampYM{2018}{11}
 
-% % Note the use of {\CharSpace} for aligning shorter numbers.
-% \Gap
-% \NumberedItem{{\CharSpace}[1]}
-% \href{http://www.example.com/my-paper-doi-1}
-% {\underline{J.~Doe} and J.~Citizen,
-% ``Measuring the extent of climate change,''
-% in \textit{Proceedings of the International Climate Change Conference},
-% London, UK,
-% \DatestampYM{2005}{11}.}
+\GapNoBreak
+\BulletItem
+T'DA4: 4th TESS Data for Asteroseismology workshop. \DatestampY{2018}, Aarhus, Denmark
+% \hfill \DatestampYM{2018}{07}
 
-%%%%%%%%%%%%%%%%%%%%%
-%% ACADEMIC AWARDS %%
-%%%%%%%%%%%%%%%%%%%%%
+\GapNoBreak
+\BulletItem
+T'DA3: 3rd TESS Data for Asteroseismology workshop. \DatestampY{2017}, Leuven, Belgium
+% \hfill \DatestampYM{2017}{12}
 
-\section
-{Grants}
-{Grants}
-{PDF:Grants}
+\GapNoBreak
+\BulletItem
+T'DA2: 2nd TESS Data for Asteroseismology workshop. \DatestampY{2017}, Aarhus, Denmark
+% \hfill \DatestampYM{2017}{04}
 
-Development of automatic tools for measuring acoustic glitches in seismic data of solar-type stars
-\hfill
-\DatestampYMD{2015}{10}{01} --
-\DatestampYMD{2016}{06}{30}
+\GapNoBreak
 \BulletItem
-Project: SPACEINN (FP7-SPACE-2012-312844)
-\BulletItem
-Supervisor: Dr. Mário João Monteiro
-\BulletItem
-Institution: Centro de Astrofísica da Universidade do Porto (CAUP)
-\BulletItem
-Grant: \textasciitilde 7000 EUR
+T'DA1: 1st TESS Data for Asteroseismology workshop. \DatestampY{2016}, Birmingham, England
+% \hfill \DatestampYM{2016}{10}
 
+\GapNoBreak
+\BulletItem
+IVth Azores International Advanced School in Space Sciences. \DatestampY{2016}, Azores, Portugal
+% \hfill \DatestampYM{2016}{07}
 
-\BigGap
-​Characterizing and modelling red giants
-\hfill
-\DatestampYMD{2017}{01}{01} --
-\DatestampYMD{2017}{12}{31}
-\BulletItem
-Project: ​CIAAUP-09/2016-BI
-\BulletItem
-Supervisor: Dr. Margarida Cunha
-\BulletItem
-Institution: Centro de Astrofísica da Universidade do Porto (CAUP)
-\BulletItem
-Grant: \textasciitilde 12000 EUR
+% \BigGap
+% \textbf{Member of the IA Stars \& Planets Research Team}
+% \GapNoBreak
+% \BulletItem
+% Participate in bi-weekly meetings with the Asteroseismology Team
+% \GapNoBreak
+% \BulletItem
+% Participate in monthly meetings with the Exoplanets Team
+
+% \BigGap
+% \textbf{Member of CAUP (Center for Astrophysics of the University of Porto)}
+% \GapNoBreak
+% \BulletItem
+% Attend regular seminar in various Astronomy topics presented by both local and visiting researchers
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% SCIENTIFIC AFFILIATIONS                %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section
-{Scientific Affiliations}
-{Scientific Affiliations}
-{PDF:ScientificAffiliations}
+% \section
+% {Scientific Affiliations}
+% {Scientific Affiliations}
+% {PDF:ScientificAffiliations}
 
-\href{http://www.sp-astronomia.pt/}
-{\textbf{Sociedade Portuguesa de Astronomia}},
-Portugal
+% \href{http://www.sp-astronomia.pt/}
+% {\textbf{Sociedade Portuguesa de Astronomia}},
+% Portugal
 
-\GapNoBreak
-\BulletItem
-Member
-\hfill
-\DatestampY{2012} --
-Present
+% \GapNoBreak
+% \BulletItem
+% Member
+% \hfill
+% \DatestampY{2012} --
+% Present
 
 %%%%%%%%%%%%%%%
 %% LANGUAGES %%
 %%%%%%%%%%%%%%%
 
+% \section
+% {Languages}
+% {Languages}
+% {PDF:Languages}
+
+% \BulletItem
+% Portuguese: Native language.
+
+% \GapNoBreak
+% \BulletItem
+% English: Fluent (speaking, reading, writing), C1 Level.
+
+% \GapNoBreak
+% \BulletItem
+% Spanish: Intermediate (reading, speaking); basic (writing).
+
+% %%%%%%%%%%%%
+% %% SKILLS %%
+% %%%%%%%%%%%%
+
 \section
+{Programming}
+{Programming}
+{PDF:Programming}
+
+\subsection
 {Languages}
 {Languages}
 {PDF:Languages}
 
+Python, C++/C, Fortran, Bash, \LaTeX
+
+\BigGap
+\subsection
+{Software developed}
+{Software developed}
+{PDF:SoftwareDeveloped}
+
 \BulletItem
-Portuguese: Native language.
+\href{https://github.com/Fill4/gptransits}{gptransits}: 
+Simultaneous characterization of planetary transits and stellar signals in the time domain using Gaussian processes 
+(\href{https://doi.org/10.1093/mnras/stz2405}{Pereira et al. 2019}).
 
 \GapNoBreak
 \BulletItem
-English: Fluent (speaking, reading, writing), C1 Level.
+\href{https://github.com/tasoc/corrections}{corrections}: 
+TESS Asteroseismic Science Operations Center (TASOC) corrections module for the TESS asteroseismic data processing pipeline 
+(contributed, \href{https://doi.org/10.3847/1538-4365/ac214a}{Lund et al. 2021}).
 
 \GapNoBreak
 \BulletItem
-Spanish: Intermediate (reading, speaking); basic (writing).
+\href{https://github.com/Fill4/sigs_freq}{sigs\_freq} \textbackslash \ \href{https://github.com/Fill4/sigs_diff}{sigs\_diff}: 
+Fit acoustic glitches (base of the convective zone and helium second ionization zone) in low-degree p-mode frequencies (sigs\_freq) or in the second differences of the frequencies (sigs\_diff) using the PIKAIA genetic algorithm 
+(\href{https://doi.org/10.1051/epjconf/201716001015}{Pereira et al. 2017}).
 
-%%%%%%%%%%%%
-%% SKILLS %%
-%%%%%%%%%%%%
-
-\section
-{Computer Skills}
-{Computer Skills}
-{PDF:Computer Skills}
-
-\BulletItem
-Basic Knowledge: Java, MySQL, C, Linux, R
-
-\GapNoBreak
-\BulletItem
-Intermediate Knowledge: {\LaTeX}, Python, MATLAB, Fortran
+% \GapNoBreak
+% \BulletItem
+% Intermediate Knowledge: {\LaTeX}, Python, MATLAB, Fortran
 
 %%%%%%%%%%%%%%%
 %% INTERESTS %%
 %%%%%%%%%%%%%%%
 
-\section
-{Interests}
-{Interests}
-{PDF:Interests}
+% \section
+% {Interests}
+% {Interests}
+% {PDF:Interests}
 
-Computer Science, Cinema, Basketball, Voleyball
+% Computer Science, Cinema, Basketball, Voleyball
+
 \end{body}
-\label{LastPage}~
+\label{LastPage}
 \end{document}

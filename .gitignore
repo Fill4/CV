@@ -3,3 +3,6 @@
 *.synctex
 *.synctex.gz
 *.out
+
+.vs
+build
